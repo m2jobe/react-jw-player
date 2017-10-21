@@ -48,6 +48,27 @@ function getPlayerOpts(opts) {
   if (image) {
     playerOpts.image = image;
   }
+  
+  playerOpts.sharing = { link: "" };
+  /*
+  Allows for social sharing to link back to your website rather than jwplayer
+  Fixes a known issue that is being worked on for an upcoming JW Player release. In the meantime, this is the workaround:
+
+  jwplayer.defaults.sharing.link = ’’;
+
+  You will need to add this to your cloud-hosted player setup like this:
+
+  <script>
+    jwplayer.defaults.sharing.link = '';
+    jwplayer('test').setup({
+      playlist: '//content.jwplatform.com/feeds/PehsHgRE.json',
+    })
+  </script>	
+  Please see test page here for code implementation:
+
+  http://dashtodd.com/jwplayer/test-sharing-library.html
+
+  */
 
   return Object.assign(playerOpts, customProps);
 }
