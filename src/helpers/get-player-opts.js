@@ -69,7 +69,7 @@ function getPlayerOpts(opts) {
   http://dashtodd.com/jwplayer/test-sharing-library.html
 
   */
-
+ 
   return Object.assign(playerOpts, customProps);
 }
 
